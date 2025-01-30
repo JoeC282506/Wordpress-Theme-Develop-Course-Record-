@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg950\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset136 \'b7\'73\'b2\'d3\'a9\'fa\'c5\'e9;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang1028 A ) src > modules > \'b3\'d0search.js  class Search \{\} export default Search\par
+\'a5\'68index.js import Search from "./modules/Search" , const Abc = new Search()\par
+\'a5\'ce\'ab\'44JQuery\'ac\'b0\'a5\'44\par
+Note) Class Search\{\}\'a4\'c03part A: constructor() \{\} / B:events()\{\} / C:typingLogic()\{\}\par
+\'c3\'fe\'a6\'fcA\'ab\'59\'a4\'48\'c5\'e9\'be\'b9\'a9\'78(\'a4\'e2\'b8\'7d, this.\'a4\'6a\'b8\'a3()), B\'ab\'59\'a4\'6a\'b8\'a3\'a7\'50\'c2\'5f\'ab\'a7\'ae\'c9\'b6\'a1\'a6\'e6\'ab\'a7\'a5\'5c\'af\'e0, C\'ab\'59\'b8\'d1\'c4\'c0\'a5\'5c\'af\'e0\par
+\par
+1) \'be\'e3overlay , addSearchHTML()\par
+ Part A\'b3\'5dthis.addSearchHTML() , Part C\'a5\'cedocument.body.insertAdjacentHTML()\'b4\'a1\'a4\'4a\'b7\'6a\'af\'c1\'ac\'4aoverlay <div>\par
+\par
+2) \'b3\'5d\'b6\'7d\'c3\'f6\'b4\'77 , openOverlay() \par
+ Part A\'b3\'5dthis.btn = document.querySelector(All) \'a5\'68\'dd\'afheader\'ad\'d3search icon(\'b9\'71\'b8\'a3/\'a4\'e2\'be\'f7) \'a6\'50overlay\'ad\'d3\'c3\'f6\'b3\'ac\'ab\'f6\'b6\'73, Part B\'c1\'6e\'a9\'faaddEventListener "click"\'a5\'68run func (open\'ad\'6eforEach\'a6\'5d\'ac\'b02\'b2\'c9\'b4\'77)\par
+Part C\'c0\'b0div\'a5\'5b\'b4\'eeclass show\'a4\'ba\'ae\'65\'a6\'50\'b2\'4d\'aa\'c5\'bf\'e9\'a4\'4a\'b0\'cf\par
+\par
+3) \'b6\'7d\'c3\'f6\'a7\'d6\'b1\'b6\'c1\'e4,  keyPressDispatcher(e)\par
+ Part B\'a5\'5b\'ae\'49document.addEvent, keydown\'ac\'4athis.keyPressDispatcher(e) , Part C\'b3\'5de.keycode == 83/27 \'ae\'c9 \'c4\'b2\'b5\'6f\'b6\'7d\'c3\'f6overlay() (open\'a5\'5c\'af\'e0\'ad\'6e\'a5\'5bdocument.activeElement.tagName\'ad\'f8\'b5\'a5\'a6\'70"INPUT"\'a6\'50"TEXTAREA") \'a8\'be\'a4\'ee\'bc\'67note or\'a8\'e4\'a5\'4c\'bf\'e9\'a4\'4a\'c4\'e6\'bc\'c3\'a8\'ec\'b4\'4e\'c4\'b2\'b5\'6f , tips: \'a6\'db\'ad\'71isOverlayOpen\'a8\'be\'a4\'ee\'a6\'68\'a6\'b8\'c4\'b2\'b5\'6f\'a7\'d6\'b1\'b6\'c1\'e4 (\'c4\'b2\'b5\'6f\'b4\'4eflase>true)\par
+\par
+4) \'b3\'5d\'bf\'e9\'a4\'4a\'ab\'e1\'a5\'58\'b5\'b2\'aa\'47\'b9\'4c\'b5\'7b,  typingLogic()\line Part A\'b3\'5dsearchField(\'bf\'e9\'a4\'4a\'b0\'cf) Part B\'b3\'5dkeyup\'b4\'4e\'c4\'b2\'b5\'6f\'bf\'e9\'a4\'4a\'ab\'e1\'b9\'42\'a7\'40\'a5\'5c\'af\'e0 PartC\'b3\'5d\'a6\'b3\'bf\'e9\'a4\'4a\'b4\'4e\'a5\'58loading\'a6\'50\'b5\'b2\'aa\'47() , \'c9\'4e\'b4\'4e\'b2\'4d\'aa\'c5\'b5\'b2\'aa\'47\'b0\'cf\par
+(note): search\'b0\'cf\'bc\'c3\'a4\'57\'a4\'55\'a5\'aa\'a5\'6b\'b3\'a3\'b7\'ed\'ad\'ab\'b7\'73\'bf\'e9\'a4\'4a, \'a9\'d2\'a5\'48\'ad\'6e\'ab\'59tpyingLogic()\'a7\'c0set this.previousValue \'b5\'a5\'a6\'70\'b7\'ed\'ab\'65\'ad\'c8 , \'a6\'41if\'a5\'5d\'a6\'ed\'a9\'d2\'a6\'b3\'a4\'ba\'ae\'65, \'b2\'c4\'a4\'40\'a6\'b8\'ab\'59""!= undefined>\'bf\'e9\'a4\'4aA\'c1\'e4, \'b2\'c42\'a6\'b8\'ab\'f6\'a5\'aa\'c1\'e4\'a6\'5d\'ac\'b0A=A\'a9\'d2\'a5\'48\'ad\'f8\'b7\'7c\'c4\'b2\'b5\'6fsearch\'a5\'5c\'af\'e0\par
+\par
+{{\field{\*\fldinst{HYPERLINK https://www.bilibili.com/video/BV1b3411G7wL?spm_id_from=333.788.player.switch&vd_source=48065571e101df38881151762dae98f0&p=59 }}{\fldrslt{https://www.bilibili.com/video/BV1b3411G7wL?spm_id_from=333.788.player.switch&vd_source=48065571e101df38881151762dae98f0&p=59\ul0\cf0}}}}\f0\fs22\par
+5) \'c0\'f2\'a8\'faapi\'b8\'ea\'ae\'c6 / \'c5\'e3\'a5\'dc\'a4\'ba\'ae\'65\par
+getResults()\{\} \'a5\'cetry / catech , try\{\} \'c5\'dc\'bc\'c6= await axios.get( \'ba\'f4 + \'a6\'db\'ad\'71api + \'bf\'e9\'a4\'4a\'b0\'cf.value )  //wp\'b9\'77\'b3\'5d\'ab\'59/wp/v2/posts?search\par
+{{\field{\*\fldinst{HYPERLINK https://developer.wordpress.org/rest-api/reference/ }}{\fldrslt{https://developer.wordpress.org/rest-api/reference/\ul0\cf0}}}}\f0\fs22\par
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\par
+GetResult\'c0\'f2\'a8\'fa\'b5\'b2\'aa\'47 /  \'a6\'db\'ad\'71 Api Logic \par
+\par
+joeproject.local/wp-json/wp/v2/posts      (Search.js)\par
+1) posts/8 \'dd\'afid = 8\par
+posts?search=award \'dd\'aftitle/content\'a6\'b3award\par
+(\'c0\'f2\'a8\'faapi\'ab\'e1)\par
+2) \'a5\'cemap\'a5\'68print\'a6\'68\'a9\'f3\'a4\'40\'ac\'4a\'b8\'ea\'ae\'c6 \par
+3) \'a5\'ce\'a4\'54\'a4\'b8\'b9\'42\'ba\'e2\'b2\'c5\'a6\'50\'a4\'ba\'ae\'65.length \'a5\'68\'a8\'4d\'a9\'77\'a5\'58ul / p , \'a6\'b3\'a4\'ba\'ae\'65\'a6\'41map li\par
+4) map\'ab\'e1.join("") \'a8\'be\'a4\'ee\'b9\'77\'b3\'5d" , " \'b6\'a1\'b9\'6a\par
+5) \'a5\'cefuns.php localize_scirpt\'a5\'68\'b1\'4esite\'c5\'dc\'b0\'ca\'ba\'41\'a8\'fa\'a5\'4ejoeproject.local \par
+6) \'ad\'ec\'a5\'cdapi\'a6\'50\'ae\'c9\'a5\'58post/page\'a5\'69\'a5\'48await Promise.all([axios 2\'a6\'b8]) \'a6\'41\'c5\'dc\'bc\'c6= \'b5\'b2\'aa\'47A.data.concat( \'b5\'b2\'aa\'47B.data)\par
+7) \'ad\'ec\'a5\'cdapi\'a6\'b3d\'a4\'ba\'ae\'65\'a5\'58\'ad\'f8\'ab\'7b , eg : author\'a5\'58\'a5\'ce\'a4\'e1ID\'ad\'f8\'ab\'59\'a6\'57 , \'ad\'6e\'a6\'41\'ab\'59"_links"\'a8\'ec\'a9\'f0url\'a6\'41fetch\'a5\'fd\'a6\'b3 , >\'ab\'59functions.php\'a8\'ecregister_rest_field\'a8\'ec\'be\'e3authorName \'a5\'68return get_the_author()\par
+7.2) \'b4\'4e\'ba\'e2show_in_rest => true \'b3\'a3\'a6\'6e\'a5\'75\'b7\'7c\'dd\'aftitle\'a6\'50main content match\'ac\'4a\'b9\'ef\'b6\'48, \'ad\'f8\'b7\'7c\'b3\'42\'b2\'7aacf\'ad\'c8\'a6\'50post type\'a4\'a7\'b6\'a1\'ac\'4a\'c3\'f6\'ab\'59 eg: \'ac\'59\'b1\'d0\'b1\'c2\'b1\'d0\'ac\'4a\'ac\'ec\'a5\'d8\par
+\par
+\'a6\'db\'ad\'71API)   (searrch-route.php)\par
+\'a6\'db\'ad\'71Logic , \'a5\'75send\'a6\'b3\'a5\'ce\'a4\'ba\'ae\'65 , \'b3\'e6fetch\'b3\'42\'b2\'7a\'a6\'68\'ad\'d3postType\tab\par
+1) \'a4\'d3\'aa\'f8\'ad\'f8\'a9\'f1functions.php, \'ab\'59\'b3\'bb require get_theme_file_path("/inc/search-route.php"); \'b6\'7dinc file \'a6\'50 search-route.php\par
+2) register_rest_route , \'ab\'59callback\'a8\'ecfunc($data) return\par
+3*)  WP_Query\'dd\'af\'a4\'ba\'ae\'65 , \'b3\'d0nested\'bc\'c6\'b2\'d5\'b0\'b5\'b5\'b2\'aa\'47array("a"=>array() ,same) > while haveposts/thepost >array_push \'b1\'c0post\'b8\'ea\'ae\'c6 array('title'=>get_the_title()) > \'b3\'cc\'ab\'e1func\'a7\'c0return\'aa\'f0\'b5\'b2\'aa\'47\'bc\'c6\'b2\'d5\par
+4*) \'a7\'ef\'b0\'caQuery\'b0\'b5\'a5\'fe\'ad\'6e\'a5\'ce\'ac\'4aPost type , \'aa\'c5\'bc\'c6\'b2\'d5\'a4\'ba\'a4\'c0\'bd\'c6\'bc\'c6\'bc\'c6\'b2\'d5("a"=>array(),"b"=>array()) ,\par
+\'a5\'ceif(get_post_type()=="program")\'a5\'68array_push\'b8\'ea\'ae\'c6\'b8\'a8\'aa\'c5\'bc\'c6\'b2\'d5\'a6\'db\'a4\'76\'ad\'d3\'a6\'ec\par
+5) \'ad\'f8\'a6\'50post-type\'a5\'5b\'ad\'f8\'a6\'50\'ac\'4aapi\'b8\'ea\'ae\'c6(\'ac\'a1\'b0\'ca\'a4\'e9\'b4\'c1-conetent.event.php),\'b1\'d0\'b1\'c2\'b9\'cf,\'a7\'40\'aa\'cc\'a6\'57etc)\par
+\par
+\'a6\'db\'ad\'71logic) \'b1\'4e\'ad\'f8\'a6\'50post type\'ac\'4aACF\'c3\'f6\'b3\'73relationship\'b3\'73\'ae\'49\'b8\'a8API (eg: program/professor)\par
+1) \'ab\'59program api \'a5\'5b"id"=>get_the_id()\par
+2) \'dd\'afprogram tick\'be\'c7\'b0\'7c \'a6\'50 \'b1\'d0\'b1\'c2/\'ac\'a1\'b0\'catick program\'ac\'4a\'a4\'c0\'a7\'4f \'b8\'d1\'c4\'c0 >\par
+\par
+\'a5\'d8\'bc\'d0A) \'b7\'6a\'af\'c1(\'a5\'cd\'aa\'ab\'be\'c7\'ac\'ec) , \'a6\'50\'ae\'c9search\'a8\'74\'b2\'ce\'a5\'58(\'a5\'cd\'aa\'ab\'ac\'db\'c3\'f6)\'b1\'d0\'b1\'c2\'a6\'50\'ac\'a1\'b0\'ca\par
+related_program (\'c3\'f6\'ab\'59-\'ac\'ec\'a5\'d8) > \'b1\'d0\'b1\'c2/\'ac\'a1\'b0\'capostType\'a5\'ce  (\'a5\'44\'c5\'e9)\par
+> WP_Query\'dd\'af\'b1\'d0\'b1\'c2\'a6\'50\'ac\'a1\'b0\'ca > metaQuery\'a9\'f0\'a6\'b3tick ACF\'b2\'c5\'a6\'58\'a5\'cd\'aa\'abID\'ac\'4a\'b3\'e6\'a6\'ec\par
+> \'a6\'b3posts / thepost >  array_push\par
+\par
+\'a5\'d8\'bc\'d0B) \'b7\'6a\'af\'c1(\'a5\'cd\'aa\'ab\'be\'c7\'ac\'ec) , \'a6\'50\'ae\'c9search \'a6\'b3\'c3\'f6\'ac\'4a\'be\'c7\'b0\'7c\par
+related_campus (\'c3\'f6\'ab\'59-\'be\'c7\'b0\'7c) > (\'a5\'cd\'aa\'ab)\'be\'c7\'ac\'ecposttType\'a5\'ce (\'a5\'44\'c5\'e9)\par
+> \'aa\'bd\'b1\'b5get_field , IF\'a6\'b3field, foreach> array_push $foreach\'b3\'e6\'a6\'ec\par
+\par
+Note) \'a8\'e4\'b9\'ea\'a5\'69\'a5\'48related_program\'a4\'f1\'ae\'49\'be\'c7\'b0\'7ctick , \'a6\'fd\'ab\'59\'bc\'e7\'a6\'62\'ac\'ec\'a5\'d8\'a6\'fb\'a6\'68\'bc\'c6100^ , \'be\'c7\'b0\'7c\'a4\'d6\'bc\'c6\'ac\'f910-20 , \'c5\'dc\'ac\'db\'a8\'43\'a6\'b8\'be\'c7\'b0\'7c\'ad\'6etick\'a4\'6a\'b6\'71 > \'b5\'6e\'b0\'4f\'b6\'71\'c1\'63\'bd\'c6 , \'a9\'d2\'a5\'48\'a5\'ceprogram\'aa\'bd\'b1\'b5\'a9\'f1\'b8\'a8\'be\'c7\'ac\'ec\'a4\'57\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
