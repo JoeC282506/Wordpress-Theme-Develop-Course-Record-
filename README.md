@@ -2,6 +2,8 @@
 
 This project was completed during my online WordPress course. It is a website for a fictional university, created using a custom theme. The website utilizes different custom post types to showcase elective courses, professors, events, and campus information.
 
+![圖片](https://github.com/JoeC282506/Wordpress-Theme-Develop-Course-Record-/blob/main/Uimg.png)
+
 ## Technology Stack
 - **HTML**
 - **CSS**
